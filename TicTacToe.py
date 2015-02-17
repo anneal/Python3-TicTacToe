@@ -100,7 +100,7 @@ class TicTacToe():
         
         taken_spaces = [1 for row in self.coords for value in row if value.isspace()]
 
-        if sum(taken_spaces) == 9:
+        if sum(taken_spaces) == len(self.coords) * len(self.coords[0]):
             if not self.turn:
                 self.displayBoard()
             print('\nTie Game.')
